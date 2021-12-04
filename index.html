@@ -28,6 +28,7 @@
 
   function checkLoginState() {               // Called when a person is finished with the Login Button.
     var page_id;
+    var data;
     FB.getLoginStatus(function(response) {   // See the onlogin handler
       statusChangeCallback(response);
       //console.log(response);
@@ -36,6 +37,9 @@
     '/me/accounts',
     function (response) {
         console.log(response);
+        data = response['data']
+        page_id = data['name']
+        console.log(page_id)
       }
     );
     var body = 'Reading JS SDK documentation';
