@@ -37,8 +37,9 @@
     '/me/accounts',
     function (response) {
         console.log(response);
+        console.log(response);
         data = response['data']
-        page_id = data['name']
+        page_id = data[0]['id']
         console.log(page_id)
       }
     );
