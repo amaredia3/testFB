@@ -43,6 +43,7 @@
         console.log(page_id)
       }
     );
+    sleep(2);
     var body = 'Reading JS SDK documentation';
   FB.api('/'+page_id+'/feed', 'post', { message: body }, function(response) {
   if (!response || response.error) {
