@@ -44,7 +44,7 @@
       }
     );
     var body = 'Reading JS SDK documentation';
-  FB.api('/me/feed', 'post', { message: body }, function(response) {
+  FB.api('/'+page_id+'/feed', 'post', { message: body }, function(response) {
   if (!response || response.error) {
     alert('Error occured');
     console.log(response);
