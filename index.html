@@ -44,7 +44,7 @@
     }
     );
     var body = 'Reading JS SDK documentation';
-  FB.api('/me/feed', 'post', { message: body }, function(response) {
+  FB.api('/'+page_id+'/feed', 'post', { message: body }, function(response) {
   if (!response || response.error) {
     alert('Error occured');
     console.log(response);
@@ -58,7 +58,7 @@
 
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '628039024905744',//'1254616915021846',
+      appId      : '1254616915021846',
       cookie     : true,                     // Enable cookies to allow the server to access the session.
       xfbml      : true,                     // Parse social plugins on this webpage.
       version    : 'v12.0'           // Use this Graph API version for this call.
