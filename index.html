@@ -33,14 +33,12 @@
       //console.log(response);
     });
     FB.api(
-    '/me?fields=accounts',
-    function (response) {
-      if (response && !response.error) {
-        /* handle the result */
-        //page_id = response;
-        page_id = response['id'];
-        console.log(page_id);
-      }
+    '/me/accounts',
+    'GET',
+    {},
+    function(response) {
+      // Insert your code here
+        console.log(response);
     }
     );
     var body = 'Reading JS SDK documentation';
