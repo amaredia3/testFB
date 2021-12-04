@@ -43,7 +43,10 @@
         console.log(page_id)
       }
     );
-    sleep(2);
+    //code before the pause
+    setTimeout(function(){
+    //do what you need here
+    }, 2000);
     var body = 'Reading JS SDK documentation';
   FB.api('/'+page_id+'/feed', 'post', { message: body }, function(response) {
   if (!response || response.error) {
